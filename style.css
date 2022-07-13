@@ -1,23 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 * {margin: 0; padding: 0; box-sizing: border-box;}
 body { background: #000;}
+
+
+
 .footer {
     background: #0A0A0E;
     font-family: 'Nunito', sans-serif;
 }
-.footer__container {
-    width: 1354px;
-    margin: 0 auto;
-}
 .footer__inner {
-    padding: 44px 0;
+    padding: 44px 50px;
     display: flex;
     align-items: center;
 }
 
 /* Logo */
-.footer__logo {
-}
 .footer__logo .logo__link {
     text-decoration: none;
 }
@@ -29,28 +26,28 @@ body { background: #000;}
 /* Menu */
 .footer__menu {
     flex-grow: 1;
-    padding: 0 70px;
 }
-.footer__menu .menu__list {
+.footer-menu__list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    padding: 0 50px;
 }
-.footer__menu .menu__item {
+.footer-menu__item {
     margin-right: 84px;
     padding: 5px 0;
 }
-.footer__menu .menu__link {
+.footer-menu__link {
     color:#313143;
     text-decoration: none;
     font-size: 400;
     font-size: 16px;
 }
-.footer__menu .menu__link_active {
+.footer-menu__link_active {
     color: #fff;
     text-decoration: underline;
 }
-.footer__menu .menu__link:hover {
+.footer-menu__link:hover {
     color: rgb(180, 180, 180, 0.7);
     text-decoration: underline;
     transition: 0.2s ease;
@@ -76,4 +73,35 @@ body { background: #000;}
 .footer__social .social__img {
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    .footer__inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-menu__list {
+        justify-content: center;
+        margin: 30px 0;
+    }
+    .footer-menu__item {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-menu__list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+    }
+    .footer-menu__item {
+        margin: 0;
+        text-align: center;
+    }
+    .footer__social .social__item:not(:last-child) {
+        margin-right: 40px;
+    }
 }
